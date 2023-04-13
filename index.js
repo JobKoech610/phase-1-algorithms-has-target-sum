@@ -1,5 +1,16 @@
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // write your algorithm here
+  
+  const seenNumbers = {};
+  for (const number of array) {
+   
+    const complement = target - number;
+    
+    if (seenNumbers[complement]) return true;
+    seenNumbers[number] = true;
+  }
+  return false;
 }
 
 /* 
@@ -8,10 +19,34 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  // pseudocode
+  // create an object to keep track of all the numbers we've seen const seenNumbers = {};
+  // iterate over the array of numbers using for of
+   // for the current number, identify a complementary number that adds to our target  const complement = target - number;
+    // (for example: if our number is 2, and the target is 5, the complementary number is 3)
+     // check if any of the keys in our object is the complement to the current number
+    // if so, return true
+        // save the current number as the key on our object so we can check it later against other numbers
+          // if we reach the end of the array, return false
+
+
+
 */
 
 /*
   Add written explanation of your solution here
+// create an object to keep track of all the numbers we've seen
+  // iterate over the array of numbers
+   // for the current number, identify a complementary number that adds to our target
+    // (for example: if our number is 2, and the target is 5, the complementary number is 3)
+     // check if any of the keys in our object is the complement to the current number
+    // if so, return true
+        // save the current number as the key on our object so we can check it later against other numbers
+          // if we reach the end of the array, return false
+
+
+
+
 */
 
 // You can run `node index.js` to view these console logs

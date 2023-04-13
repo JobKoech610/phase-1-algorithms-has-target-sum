@@ -35,7 +35,7 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
-// create an object to keep track of all the numbers we've seen
+// the object (seenNumbers) keep track of all the numbers we've seen
   // iterate over the array of numbers
    // for the current number, identify a complementary number that adds to our target
     // (for example: if our number is 2, and the target is 5, the complementary number is 3)
